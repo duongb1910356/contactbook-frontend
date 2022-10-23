@@ -11,7 +11,7 @@
                 class="form-control"
                 v-model="contactLocal.name"
             />  
-            <ErrorMessage namme="name" class="error-feedback" />         
+            <ErrorMessage name="name" class="error-feedback" />         
         </div>
         <div class="form-group">
             <label for="email">E-mail</label>
@@ -55,14 +55,16 @@
             </label>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">Lưu</button>
+            <button class="btn btn-primary">
+                <i class="fa-regular fa-floppy-disk"></i> Lưu
+            </button>
             <button
                 v-if="contactLocal._id"
                 type="button"
                 class="ml-2 btn btn-danger"
                 @click="deleteContact"
             >
-                Xóa
+            <i class="fas fa-trash-alt"></i> Xóa
             </button>
         </div>
     </Form>
